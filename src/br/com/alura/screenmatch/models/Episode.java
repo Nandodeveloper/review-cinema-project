@@ -1,11 +1,10 @@
 package br.com.alura.screenmatch.models;
-
 import br.com.alura.screenmatch.rating.Classifiable;
 
 public class Episode implements Classifiable {
     private String name;
     private int number;
-    private Serie serie;
+    private Series series;
     private int totalViews;
 
     public String getName() {
@@ -24,12 +23,12 @@ public class Episode implements Classifiable {
         this.number = number;
     }
 
-    public Serie getSerie() {
-        return serie;
+    public Series getSeries() {
+        return series;
     }
 
-    public void setSerie(Serie serie) {
-        this.serie = serie;
+    public void setSeries(Series series) {
+        this.series = series;
     }
 
     public int getTotalViews() {

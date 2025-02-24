@@ -5,11 +5,11 @@ public class RecommendationFilter {
 
     public void filter(Classifiable classifiable) {
         if (classifiable.getClassification() >= 4) {
-            System.out.println("Está entre os melhores!");
+            System.out.println("It's among the best!");
         } else if (classifiable.getClassification() >= 2) {
-            System.out.println("Muito bem avaliado no momento!");
+            System.out.println("Very highly rated at the moment!");
         } else {
-            System.out.println("Coloque na sua lista para assistir depois!");
+            System.out.println("Put it on your list to watch later!");
         }
     }
 }

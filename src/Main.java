@@ -1,10 +1,9 @@
 import br.com.alura.screenmatch.calculator.TimeCalculator;
 import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
-import br.com.alura.screenmatch.models.Serie;
+import br.com.alura.screenmatch.models.Series;
 import br.com.alura.screenmatch.rating.RecommendationFilter;
 
-import java.util.logging.Filter;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,7 +23,7 @@ public class Main {
         Movie movie2 = new Movie();
         movie2.setDuration(150);
 
-        Serie dexter = new Serie();
+        Series dexter = new Series();
         dexter.setName("Dexter");
         dexter.setReleaseYear(1972);
         dexter.setIncludedInPlan(true);
@@ -37,7 +36,7 @@ public class Main {
         dexter.rate(5.0);
         dexter.rate(9.0);
         dexter.displayTitle();
-        System.out.println("Duração para maratonar dexter: "+dexter.getDuration()+" min");
+        System.out.println("Duration to marathon dexter: "+dexter.getDuration()+" min");
 
         TimeCalculator timeCalculator = new TimeCalculator();
         timeCalculator.includes(movie1);
@@ -52,7 +51,7 @@ public class Main {
 
         Episode ep = new Episode();
         ep.setNumber(1);
-        ep.setSerie(dexter);
+        ep.setSeries(dexter);
         ep.setTotalViews(300);
         filter.filter(ep);
     }

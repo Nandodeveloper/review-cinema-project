@@ -1,8 +1,7 @@
 package br.com.alura.screenmatch.models;
-
 import br.com.alura.screenmatch.rating.Classifiable;
 
-public class Serie extends Title implements Classifiable {
+public class Series extends Title implements Classifiable {
     private int seasons;
     private int epPerSeason;
     private boolean active;

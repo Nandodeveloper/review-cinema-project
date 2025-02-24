@@ -1,5 +1,4 @@
 package br.com.alura.screenmatch.calculator;
-import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Title;
 
 public class TimeCalculator {
