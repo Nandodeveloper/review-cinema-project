@@ -7,14 +7,8 @@ public class Series extends Title implements Classifiable {
     private boolean active;
     private int minutesPerEp;
 
-    public Series(String name, int releaseYear, int seasons, int epPerSeason,
-                  int minutesPerEp, boolean active){
-        this.setName(name);
-        this.setReleaseYear(releaseYear);
-        this.setSeasons(seasons);
-        this.setEpPerSeason(epPerSeason);
-        this.setMinutesPerEp(minutesPerEp);
-        this.setActive(active);
+    public Series(String name, int duration, int releaseYear) {
+        super(name, duration, releaseYear);
     }
 
     public boolean isActive() {
@@ -53,10 +47,12 @@ public class Series extends Title implements Classifiable {
     public int getDuration() {
         return seasons * epPerSeason * minutesPerEp;
     }
+
     @Override
     public int getClassification() {
         return (int) average() / 2;
     }
+
     @Override
     public String toString() {
         return "Series: " + this.getName() + " (" + this.getReleaseYear() + ")";

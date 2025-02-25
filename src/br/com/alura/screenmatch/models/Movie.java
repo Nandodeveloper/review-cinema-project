@@ -5,11 +5,8 @@ public class Movie extends Title implements Classifiable {
 
     private String director;
 
-    public Movie(String name, String director, int duration, int releaseYear){
-        this.setName(name);
-        this.setDirector(director);
-        this.setDuration(duration);
-        this.setReleaseYear(releaseYear);
+    public Movie(String name, String director, int duration, int releaseYear) {
+        super(name, duration, releaseYear);
     }
 
     public String getDirector() {
@@ -19,10 +16,12 @@ public class Movie extends Title implements Classifiable {
     public void setDirector(String director) {
         this.director = director;
     }
+
     @Override
     public int getClassification() {
         return (int) average() / 2;
     }
+
     @Override
     public String toString() {
         return "Movie: " + this.getName() + " (" + this.getReleaseYear() + ")";

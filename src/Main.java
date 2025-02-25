@@ -25,8 +25,7 @@ public class Main {
         joker.rate(9);
         joker.getClassification();
 
-        Series dexter = new Series("Dexter", 1972, 8,
-                12, 54, false);
+        Series dexter = new Series("Dexter", 1972, 8);
         dexter.getDuration();
         dexter.rate(8.5);
         dexter.getClassification();

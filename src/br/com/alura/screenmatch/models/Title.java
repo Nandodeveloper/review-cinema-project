@@ -8,6 +8,12 @@ public class Title {
     private int totalRatings = 0;
     private int duration;
 
+    public Title(String name, int duration, int releaseYear){
+        this.setName(name);
+        this.setDuration(duration);
+        this.setReleaseYear(releaseYear);
+    }
+
     public double getSumOfRatings() {
         return sumOfRatings;
     }
