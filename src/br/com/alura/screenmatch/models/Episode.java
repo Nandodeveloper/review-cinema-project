@@ -7,6 +7,12 @@ public class Episode implements Classifiable {
     private Series series;
     private int totalViews;
 
+    public Episode(String name, Series series, int number) {
+        this.setName(name);
+        this.setSeries(series);
+        this.setNumber(number);
+    }
+
     public String getName() {
         return name;
     }

@@ -10,37 +10,24 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie goodFather = new Movie();
-        goodFather.setName("The GoodFather");
-        goodFather.setDirector("Francis Ford");
-        goodFather.setDuration(180);
-        goodFather.setReleaseYear(1972);
+        Movie goodFather = new Movie("The GoodFather", "Francis Ford",
+                180, 1972);
         goodFather.rate(8.5);
         goodFather.getClassification();
 
-        Movie avatar = new Movie();
-        avatar.setName("Avatar");
-        avatar.setReleaseYear(2009);
-        avatar.setDirector("James Cameron");
-        avatar.setDuration(162);
+        Movie avatar = new Movie("Avatar", "James Cameron",
+                162, 2009);
         avatar.rate(8);
         avatar.getClassification();
 
-        Movie joker = new Movie();
-        joker.setName("Joker");
-        joker.setReleaseYear(2019);
-        joker.setDirector("Todd Phillips");
-        joker.setDuration(122);
+        Movie joker = new Movie("Joker", "Todd Phillips",
+                122, 2019);
         joker.rate(9);
         joker.getClassification();
 
-        Series dexter = new Series();
-        dexter.setName("Dexter");
-        dexter.setReleaseYear(1972);
-        dexter.setMinutesPerEp(54);
-        dexter.setSeasons(8);
-        dexter.setEpPerSeason(12);
-        dexter.setActive(false);
+        Series dexter = new Series("Dexter", 1972, 8,
+                12, 54, false);
+        dexter.getDuration();
         dexter.rate(8.5);
         dexter.getClassification();
 
@@ -57,9 +44,7 @@ public class Main {
 //        filter.filter(dexter);
 //        filter.filter(joker);
 
-        Episode ep = new Episode();
-        ep.setNumber(1);
-        ep.setSeries(dexter);
+        Episode ep = new Episode("Dexter", dexter, 1);
         ep.setTotalViews(300);
         //filter.filter(ep);
 
@@ -67,11 +52,14 @@ public class Main {
         movieArray.add(goodFather);
         movieArray.add(avatar);
         movieArray.add(joker);
-//        System.out.println(movieArray.size());
-//        System.out.println(movieArray.get(0).getName());
+        System.out.println(movieArray.size());
         for (int i = 0; i < movieArray.size(); i++) {
-            System.out.println("Movie: " + movieArray.get(i).getName()
+            System.out.println( i + "." + " Movie: " + movieArray.get(i).getName()
                     + " (" + movieArray.get(i).getReleaseYear() + ")");
+        }
+        for(Title title : movieArray) {
+                System.out.println("Movie: " + title.getName()
+                        + " (" + title.getReleaseYear() + ")");
         }
         System.out.println(movieArray.toString());
     }

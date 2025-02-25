@@ -7,7 +7,9 @@ public class TimeCalculator {
     public int getFullTime() {
         return fullTime;
     }
+
     public void includes(Title title) {
-        fullTime += title.getDuration();
+        System.out.println("Adding duration in minutes of " + title);
+        this.fullTime += title.getDuration();
     }
 }
