@@ -69,4 +69,9 @@ public class Title {
             System.out.println("Total ratings: " + totalRatings);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Movie: " + this.getName() + " (" + this.getReleaseYear() + ")";
+    }
 }
