@@ -5,8 +5,8 @@ public class Movie extends Title implements Classifiable {
 
     private String director;
 
-    public Movie(String name, String director, int duration, int releaseYear) {
-        super(name, duration, releaseYear);
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
     }
 
     public String getDirector() {

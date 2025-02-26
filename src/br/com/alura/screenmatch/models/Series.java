@@ -7,8 +7,8 @@ public class Series extends Title implements Classifiable {
     private boolean active;
     private int minutesPerEp;
 
-    public Series(String name, int duration, int releaseYear) {
-        super(name, duration, releaseYear);
+    public Series(String name, int releaseYear) {
+        super(name, releaseYear);
     }
 
     public boolean isActive() {
