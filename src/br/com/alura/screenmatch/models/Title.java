@@ -22,7 +22,7 @@ public class Title implements Comparable<Title>{
     public Title(OmdbTitle omdbTitle) {
         this.name = omdbTitle.title();
         if(omdbTitle.year().length() > 4) {
-            throw new InvalidYearException("Não consegui converter o ano pois tem mais de 4 caracteres.");
+            throw new InvalidYearException("I couldn't convert the year because it has more than 4 characters.");
         }
         this.releaseYear = Integer.valueOf(omdbTitle.year());
         this.duration = Integer.valueOf((omdbTitle.runtime().substring(0, 3)).replace(" ", ""));

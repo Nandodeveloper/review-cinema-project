@@ -27,7 +27,7 @@ public class RequestMain {
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting()
                 .create();
         while (!reader.equalsIgnoreCase("exit")) {
-            System.out.println("Digite um filme: ");
+            System.out.println("Enter a movie: ");
             reader = s.nextLine();
             if(reader.equalsIgnoreCase("exit")) {
                 System.out.println("Closing...");
@@ -49,10 +49,10 @@ public class RequestMain {
                 System.out.println(title);
                 titleList.add(title);
             } catch (NumberFormatException e) {
-                System.out.println("Ocorreu um erro:");
+                System.out.println("An error occurred:");
                 System.out.println(e.getMessage());
             } catch (IllegalArgumentException e) {
-                System.out.println("Algum erro na busca, verifique o endereço url:");
+                System.out.println("Any error in the search, check the url address:");
                 System.out.println(e.getMessage());
             } catch (InvalidYearException e) {
                 System.out.println(e.getMessage());
@@ -62,6 +62,6 @@ public class RequestMain {
         writer.write(gson.toJson(titleList));
         writer.close();
         System.out.println(titleList);
-        System.out.println("Programa finalizado");
+        System.out.println("Program finished");
     }
 }
