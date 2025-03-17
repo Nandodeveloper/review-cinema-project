@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Joker",
+    "ReleaseYear": 2019,
+    "IncludedInPlan": false,
+    "SumOfRatings": 0.0,
+    "TotalRatings": 0,
+    "Duration": 122
+  },
+  {
+    "Name": "Top Gun",
+    "ReleaseYear": 1986,
+    "IncludedInPlan": false,
+    "SumOfRatings": 0.0,
+    "TotalRatings": 0,
+    "Duration": 109
+  },
+  {
+    "Name": "Matrix",
+    "ReleaseYear": 1993,
+    "IncludedInPlan": false,
+    "SumOfRatings": 0.0,
+    "TotalRatings": 0,
+    "Duration": 60
+  }
+]

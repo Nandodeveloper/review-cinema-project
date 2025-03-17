@@ -1,6 +1,12 @@
 package br.com.alura.screenmatch.models;
 
-public class Title {
+import br.com.alura.screenmatch.exceptions.InvalidYearException;
+import br.com.alura.screenmatch.main.OmdbTitle;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.Arrays;
+
+public class Title implements Comparable<Title>{
     private String name;
     private int releaseYear;
     private boolean includedInPlan;
@@ -11,6 +17,15 @@ public class Title {
     public Title(String name, int releaseYear){
         this.setName(name);
         this.setReleaseYear(releaseYear);
+    }
+
+    public Title(OmdbTitle omdbTitle) {
+        this.name = omdbTitle.title();
+        if(omdbTitle.year().length() > 4) {
+            throw new InvalidYearException("Não consegui converter o ano pois tem mais de 4 caracteres.");
+        }
+        this.releaseYear = Integer.valueOf(omdbTitle.year());
+        this.duration = Integer.valueOf((omdbTitle.runtime().substring(0, 3)).replace(" ", ""));
     }
 
     public double getSumOfRatings() {
@@ -73,5 +88,15 @@ public class Title {
         } else {
             System.out.println("Total ratings: " + totalRatings);
         }
+    }
+
+    @Override
+    public int compareTo(Title o) {
+        return this.getName().compareTo(o.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "(Title: " + name + " (" + releaseYear + "), " + "runtime: " + duration + " min)";
     }
 }
